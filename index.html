@@ -3,47 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>កម្មវិធីដាក់ស៊ុមរូបភាព</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;700&display=swap" rel="stylesheet" />
+  <title data-i18n="appTitle">📸 កម្មវិធីដាក់ស៊ុមរូបភាព</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h2>📸 កម្មវិធីដាក់ស៊ុមរូបភាព</h2>
+  <!-- Language Toggle -->
+  <div class="lang-switch">
+    <button data-lang="km">ខ្មែរ</button>
+    <button data-lang="en">English</button>
+    <button data-lang="ch">中國</button>
+  </div>
+
+  <!-- App Title -->
+  <h2 data-i18n="appTitle">📸 កម្មវិធីដាក់ស៊ុមរូបភាព</h2>
 
   <div class="card">
+    <!-- File Input -->
     <input type="file" accept="image/*" id="uploadInput" />
 
+    <!-- Scale Display -->
     <div class="scale-display">
-      កម្រិតពង្រីក៖ <span id="scaleDisplay">100%</span>
+      <span data-i18n="scaleLabel">កម្រិតពង្រីក៖</span>
+      <span id="scaleDisplay">100%</span>
     </div>
 
+    <!-- Controls -->
     <div>
-      <button class="button" onclick="zoomIn()">ពង្រីក</button>
-      <button class="button" onclick="zoomOut()">បង្រួម</button>
-      <button class="button" onclick="resetTransform()">កំណត់ឡើងវិញ</button>
+      <button class="button" onclick="zoomIn()" data-i18n="zoomIn">
+        ពង្រីក
+      </button>
+      <button class="button" onclick="zoomOut()" data-i18n="zoomOut">
+        បង្រួម
+      </button>
+      <button class="button" onclick="resetTransform()" data-i18n="reset">
+        កំណត់ឡើងវិញ
+      </button>
     </div>
 
+    <!-- Image + Frame -->
     <div class="container" id="imageContainer">
-      <img id="userPhoto" class="zoomable" src="" alt="Uploaded" style="display:none;" />
+      <img
+        id="userPhoto"
+        class="zoomable"
+        src=""
+        alt="Uploaded"
+        style="display: none;"
+      />
       <img id="frameImage" class="frame" src="Frame.png" alt="Frame" />
     </div>
 
-    <button class="button download-btn" onclick="downloadImage()">ទាញយករូបភាព</button>
+    <!-- Download Button -->
+    <button class="button download-btn" onclick="downloadImage()" data-i18n="download">
+      ទាញយករូបភាព
+    </button>
   </div>
 
-  <canvas id="canvas" width="1080" height="1100"></canvas>
-
+  <!-- Contact Section -->
   <div class="contact">
-    <h3>📣 ទំនាក់ទំនងមកកាន់យើង</h3>
-    <p>សូមចូលទៅកាន់បណ្តាញសង្គមដើម្បីទាក់ទង ឬសហការណ៍ជាមួយក្រុមយើងខ្ញុំ:</p>
+    <h3 data-i18n="contactTitle">📣 ទំនាក់ទំនងមកកាន់យើង</h3>
+    <p data-i18n="contactText">
+      សូមចូលទៅកាន់បណ្តាញសង្គមដើម្បីទាក់ទង ឬសហការណ៍ជាមួយក្រុមយើងខ្ញុំ:
+    </p>
     <div class="social-links">
-      <a href="https://www.facebook.com/profile.php?id=61556472063506&mibextid=LQQJ4d" target="_blank">🌐 Facebook</a>
-      <a href="https://t.me/emvireak" target="_blank">💬 Telegram</a>
-      <a href="https://tiktok.com/@yyyan168" target="_blank">🎵 TikTok</a>
+      <a href="https://www.facebook.com/…" target="_blank" data-i18n="facebook">
+        🌐 Facebook
+      </a>
+      <a href="https://t.me/…" target="_blank" data-i18n="telegram">
+        💬 Telegram
+      </a>
+      <a href="https://tiktok.com/…" target="_blank" data-i18n="tiktok">
+        🎵 TikTok
+      </a>
     </div>
   </div>
 
+  <canvas id="canvas" width="1080" height="1100" style="display: none;"></canvas>
   <script src="script.js"></script>
 </body>
 </html>
