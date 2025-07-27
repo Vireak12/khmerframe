@@ -110,7 +110,7 @@ async function downloadImage() {
 
     const link = document.createElement("a");
     link.download = "framed-image.jpg";
-    link.href = canvas.toDataURL("image/jpeg");
+    link.href = canvas.toDataURL("image/jpg");
     link.click();
   } catch (err) {
     alert("មានបញ្ហាក្នុងការទាញយក។ សូមពិនិត្យ Frame.png");
