@@ -1,3 +1,6 @@
+/* —————————————————————— */
+/* Your original styles */
+/* —————————————————————— */
 body {
   font-family: 'Noto Sans Khmer', sans-serif;
   background: linear-gradient(135deg, #1de9b6, #1dc4e9);
@@ -10,79 +13,57 @@ body {
   color: white;
   animation: fadeBg 1s ease-in;
 }
-
 @keyframes fadeBg {
-  from {
-    background-color: #000;
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { background-color: #000; opacity: 0; }
+  to   { opacity: 1; }
 }
-
 h2 {
   font-size: 32px;
   margin-bottom: 24px;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
   opacity: 0;
   transform: translateY(-10px);
   animation: slideDown 0.8s ease-out 0.3s forwards;
 }
-
 @keyframes slideDown {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  to { opacity: 1; transform: translateY(0); }
 }
-
 .card {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
   backdrop-filter: blur(16px);
   border-radius: 24px;
   padding: 32px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
   max-width: 420px;
   width: 100%;
   text-align: center;
   animation: fadeInUp 0.7s ease-out both;
 }
-
 @keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px) scale(0.95);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+  0% { opacity: 0; transform: translateY(30px) scale(0.95); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
 }
-
 input[type="file"] {
   margin-bottom: 20px;
   padding: 12px;
   font-size: 16px;
   border: 2px dashed #80deea;
   border-radius: 16px;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255,255,255,0.15);
   width: 100%;
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
 input[type="file"]:hover {
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255,255,255,0.25);
 }
-
 .container {
   position: relative;
   width: 100%;
   max-width: 300px;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1/1;
   margin: 20px auto;
   border-radius: 20px;
   overflow: hidden;
@@ -90,48 +71,28 @@ input[type="file"]:hover {
   background: white;
   animation: zoomIn 0.6s ease-out;
 }
-
 @keyframes zoomIn {
-  from {
-    transform: scale(0.7);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
+  from { transform: scale(0.7); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
 }
-
 .zoomable, .frame {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.zoomable {
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   object-fit: cover;
-  z-index: 1;
-  cursor: grab;
-  transition: transform 0.2s ease;
 }
-
 .frame {
   object-fit: contain;
   z-index: 2;
   pointer-events: none;
 }
-
 .frame:hover {
   animation: pulse 1.5s infinite;
 }
-
 @keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.02); }
+  0%,100% { transform: scale(1); }
+  50%     { transform: scale(1.02); }
 }
-
 .scale-display {
   font-size: 18px;
   margin: 10px 0;
@@ -139,7 +100,6 @@ input[type="file"]:hover {
   color: #ffffff;
   text-shadow: 1px 1px 2px #000;
 }
-
 .button {
   background: linear-gradient(135deg, #00c6ff, #0072ff);
   color: white;
@@ -150,38 +110,24 @@ input[type="file"]:hover {
   margin: 8px 6px;
   cursor: pointer;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
-
 .button:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
 }
-
 .download-btn {
   background: linear-gradient(135deg, #43e97b, #38f9d7);
   margin-top: 20px;
 }
-
-canvas {
-  display: none;
-}
-
 .contact {
   margin-top: 50px;
   text-align: center;
   padding: 20px;
 }
-
-.contact h3 {
+.contact h3, .contact p {
   color: white;
-  margin-bottom: 12px;
 }
-
-.contact p {
-  color: #e0f7fa;
-}
-
 .social-links {
   margin-top: 20px;
   display: flex;
@@ -189,9 +135,8 @@ canvas {
   gap: 10px;
   align-items: center;
 }
-
 .social-links a {
-  background-color: #ffffff20;
+  background-color: rgba(255,255,255,0.2);
   color: white;
   padding: 12px 22px;
   border-radius: 12px;
@@ -202,12 +147,34 @@ canvas {
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
 }
-
 .social-links a:nth-child(1) { background-color: #3b599880; }
 .social-links a:nth-child(2) { background-color: #0088cc80; }
 .social-links a:nth-child(3) { background-color: #00000080; }
-
 .social-links a:hover {
-  background-color: #ffffff30;
+  background-color: rgba(255,255,255,0.3);
   transform: translateY(-3px) scale(1.05);
+}
+
+/* —————————————————————— */
+/* Language‐switcher styles  */
+/* —————————————————————— */
+.lang-switch {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+.lang-switch button {
+  margin-left: 8px;
+  background: rgba(255,255,255,0.3);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.lang-switch button.active {
+  background: white;
+  color: #1dc4e9;
 }
